@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA0D65BC-32EE-45B2-8BD9-BAF5F840793C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IcsokaPayments.Service</RootNamespace>
+    <AssemblyName>IcsokaPayments.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\CacheExtensions.cs" />
+    <Compile Include="Caching\ICacheManager.cs" />
+    <Compile Include="Caching\MemoryCacheManager.cs" />
+    <Compile Include="Caching\NullCache.cs" />
+    <Compile Include="Caching\PerRequestCacheManager.cs" />
+    <Compile Include="Configurations\ISettings.cs" />
+    <Compile Include="Configurations\SettingExtensions.cs" />
+    <Compile Include="Configurations\SettingService.cs" />
+    <Compile Include="Helpers\CommonHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelper.cs" />
+    <Compile Include="Helpers\IDateTimeHelper.cs" />
+    <Compile Include="Helpers\IWebHelper.cs" />
+    <Compile Include="Helpers\WebHelper.cs" />
+    <Compile Include="Helpers\XMLHelper.cs" />
+    <Compile Include="Infrastructure\ComponentModel\GenericListTypeConverter.cs" />
+    <Compile Include="Infrastructure\IRepositoryService.cs" />
+    <Compile Include="Infrastructure\IRepositoryServiceGet.cs" />
+    <Compile Include="Infrastructure\RepositoryService.cs" />
+    <Compile Include="Logging\DefaultLogger.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\LoggingExtensions.cs" />
+    <Compile Include="Logging\NullLogger.cs" />
+    <Compile Include="MakePaymentResult.cs" />
+    <Compile Include="Payments\PaymentMethodProvider.cs" />
+    <Compile Include="Payments\IPaymentMethodProvider.cs" />
+    <Compile Include="Configurations\ISettingService.cs" />
+    <Compile Include="Payments\PaymentService.cs" />
+    <Compile Include="Payments\IPaymentService.cs" />
+    <Compile Include="Payments\PaymentSettings.cs" />
+    <Compile Include="Payments\SettlementService.cs" />
+    <Compile Include="SettlementProcessingService .cs" />
+    <Compile Include="ISettlementProcessingService.cs" />
+    <Compile Include="Payments\CancelRecurringPaymentRequest.cs" />
+    <Compile Include="Payments\CancelRecurringPaymentResult.cs" />
+    <Compile Include="Payments\CapturePaymentRequest.cs" />
+    <Compile Include="Payments\CapturePaymentResult.cs" />
+    <Compile Include="Payments\IPaymentMethod.cs" />
+    <Compile Include="Payments\PaymentMethodBase.cs" />
+    <Compile Include="Payments\PostProcessPaymentRequest.cs" />
+    <Compile Include="Payments\PreProcessPaymentResult.cs" />
+    <Compile Include="Payments\ProcessPaymentRequest.cs" />
+    <Compile Include="Payments\ProcessPaymentResult.cs" />
+    <Compile Include="Payments\RefundPaymentRequest.cs" />
+    <Compile Include="Payments\RefundPaymentResult.cs" />
+    <Compile Include="Payments\VoidPaymentRequest.cs" />
+    <Compile Include="Payments\VoidPaymentResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IcsokaPayments.Data\IcsokaPayments.Data.csproj">
+      <Project>{D5D2E578-D99B-4AED-9D49-6FE81B73AE51}</Project>
+      <Name>IcsokaPayments.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IcsokaPayments.Domain\IcsokaPayments.Domain.csproj">
+      <Project>{596A6FC4-08C1-492F-A6BC-7E3B56D638AD}</Project>
+      <Name>IcsokaPayments.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

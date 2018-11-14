@@ -1,0 +1,90 @@
+﻿/* styles for validation helpers */
+
+.field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-140%);
+    -moz-transform: translateY(-140%);
+    -ms-transform: translateY(-140%);
+    -o-transform: translateY(-140%);
+    transform: translateY(-140%);
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border-bottom: 1px solid #e80c4d;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+.validation-summary-valid {
+    display: none;
+}
+
+.error {
+    color: #e80c4d;
+}
+
+.validationMessage {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-140%);
+    -moz-transform: translateY(-140%);
+    -ms-transform: translateY(-140%);
+    -o-transform: translateY(-140%);
+    transform: translateY(-140%);
+}
+
+/* label color */
+.input-field label {
+    color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    -webkit-box-shadow: 0 1px 0 0 #000;
+    -ms-box-shadow: 0 1px 0 0 #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #8FC547;
+    -webkit-box-shadow: 0 1px 0 0 #8FC547;
+    -ms-box-shadow: 0 1px 0 0 #8FC547;
+    box-shadow: 0 1px 0 0 #8FC547;
+}
+
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #e80c4d;
+    -webkit-box-shadow: 0 1px 0 0 #e80c4d;
+    -ms-box-shadow: 0 1px 0 0 #e80c4d;
+    box-shadow: 0 1px 0 0 #e80c4d;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #000;
+}
+
+
+

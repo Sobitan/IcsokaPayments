@@ -1,0 +1,22 @@
+﻿@model IcsokaPayments.Web.Models.ConfirmModel
+
+
+
+
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card  red ">
+            <div class="card-content white-text">
+                <span class="card-title">Error</span>
+                @foreach (var m in Model.Warnings)
+{
+    <p class="white-text">@m</p>
+}
+            </div>
+            <div class="card-action white-text">
+                @Html.ActionLink("Try Again", "Index")
+            </div>
+        </div>
+    </div>
+</div>

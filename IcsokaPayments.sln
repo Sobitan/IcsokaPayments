@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcsokaPayments.Web", "IcsokaPayments.Web\IcsokaPayments.Web.csproj", "{1748FA85-60A4-478D-9F3D-CE867CD6F93C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcsokaPayments.UnitTest", "IcsokaPayments.UnitTest\IcsokaPayments.UnitTest.csproj", "{0B50C8BD-281D-4B61-88EF-327C3454C0E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcsokaPayments.Service", "IcsokaPayments.Service\IcsokaPayments.Service.csproj", "{FA0D65BC-32EE-45B2-8BD9-BAF5F840793C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcsokaPayments.Domain", "IcsokaPayments.Domain\IcsokaPayments.Domain.csproj", "{596A6FC4-08C1-492F-A6BC-7E3B56D638AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcsokaPayments.Data", "IcsokaPayments.Data\IcsokaPayments.Data.csproj", "{D5D2E578-D99B-4AED-9D49-6FE81B73AE51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcsokaPayments.Web.Core.Processors", "IcsokaPayments.Web.Core\IcsokaPayments.Web.Core.Processors.csproj", "{710F94F8-D9CD-4329-8A4F-5E41ABCFF21A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1748FA85-60A4-478D-9F3D-CE867CD6F93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1748FA85-60A4-478D-9F3D-CE867CD6F93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1748FA85-60A4-478D-9F3D-CE867CD6F93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1748FA85-60A4-478D-9F3D-CE867CD6F93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B50C8BD-281D-4B61-88EF-327C3454C0E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B50C8BD-281D-4B61-88EF-327C3454C0E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B50C8BD-281D-4B61-88EF-327C3454C0E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B50C8BD-281D-4B61-88EF-327C3454C0E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0D65BC-32EE-45B2-8BD9-BAF5F840793C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0D65BC-32EE-45B2-8BD9-BAF5F840793C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0D65BC-32EE-45B2-8BD9-BAF5F840793C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0D65BC-32EE-45B2-8BD9-BAF5F840793C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596A6FC4-08C1-492F-A6BC-7E3B56D638AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596A6FC4-08C1-492F-A6BC-7E3B56D638AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596A6FC4-08C1-492F-A6BC-7E3B56D638AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596A6FC4-08C1-492F-A6BC-7E3B56D638AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5D2E578-D99B-4AED-9D49-6FE81B73AE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D2E578-D99B-4AED-9D49-6FE81B73AE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D2E578-D99B-4AED-9D49-6FE81B73AE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D2E578-D99B-4AED-9D49-6FE81B73AE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710F94F8-D9CD-4329-8A4F-5E41ABCFF21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710F94F8-D9CD-4329-8A4F-5E41ABCFF21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710F94F8-D9CD-4329-8A4F-5E41ABCFF21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710F94F8-D9CD-4329-8A4F-5E41ABCFF21A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

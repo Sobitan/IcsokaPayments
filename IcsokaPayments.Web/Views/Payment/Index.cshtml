@@ -1,0 +1,91 @@
+﻿@model IcsokaPayments.Web.Models.PaymentModel
+
+@{
+    ViewBag.Title = "Make Payment";
+}
+
+
+@section style
+{
+    <link href="~/Scripts/keypad/jquery.keypad.css" rel="stylesheet">
+}
+<div class="row"></div>
+@using (Html.BeginForm("Pay","Payment", FormMethod.Post)) 
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="row">
+        <div class="col s12">
+            @Html.ValidationSummary(true)
+            <div class="col s6">
+                <h3>Payment Info</h3>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Email)
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Amount, new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Amount)
+                        @Html.ValidationMessageFor(model => model.Amount)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SelectedPaymentMethod, new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.SelectedPaymentMethod, Model.PaymentMethods)
+                        @Html.ValidationMessageFor(model => model.SelectedPaymentMethod)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Pay" class="btn btn-default"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6">
+                <h3>Card Details</h3>
+                @Html.Action("ManualPaymentInfo")
+            </div>
+            
+           
+            
+        </div>
+        
+    </div>
+    
+    
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script src="~/Scripts/keypad/jquery.plugin.js"></script>
+<script src="~/Scripts/keypad/jquery.keypad.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').material_select();
+            $('#PinCode').keypad();
+            $(document).on("change select", "#CreditCardType", function (e) {
+                var icon;
+                if (e.currentTarget.value === "MasterCard") {
+                    icon = $(e.currentTarget).parent().parent().find(".fa");
+                    icon.removeClass("fa-cc-visa");
+                    icon.addClass("fa-cc-mastercard");
+                } else {
+                    icon = $(e.currentTarget).parent().parent().find(".fa");
+                    icon.removeClass("fa-cc-mastercard");
+                    icon.addClass("fa-cc-visa ");
+                }
+            });
+        });
+
+
+    </script>
+}

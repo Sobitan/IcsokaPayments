@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" media="screen,projection">
+    @Styles.Render("~/Content/materialize")
+    @Styles.Render("~/Content/css")
+    @RenderSection("style", false)
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <nav  role="navigation">
+        <div class="nav-wrapper container">
+            @Html.ActionLink("IcsokaPayment", "Index", "Home", null, new { @class = "brand-logo", id = "logo-container" })
+            <ul class="right hide-on-med-and-down">
+                <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })</li>
+                <li>@Html.ActionLink("Make Payment", "Index", "Payment", null, new { @class = "navbar-brand" })</li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav" style="left: -250px;">
+                <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })</li>
+                <li>@Html.ActionLink("Make Payment", "Index", "Payment", null, new { @class = "navbar-brand" })</li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/materialize")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
